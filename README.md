@@ -50,6 +50,39 @@ TBD
 We propose a unique dataset which could be used for the evaluation of the REIGNN model. The initial data was gathered from the [Semantic Scholar Open Research Corpus](https://api.semanticscholar.org/corpus) and [SCImago Journal & Country Rank website](https://www.scimagojr.com).
 
 <table>
+<tr><td>
+
+<table>
+  <tr>
+    <td colspan="3">CS1021(GLOBAL)</td>
+  </tr>
+  <tr>
+    <td>Network type</td>
+    <td>Co-authorship</td>
+    <td>Citation</td>
+  </tr>
+  
+  <tr>
+    <td>Nodes</td>
+    <td>2798829</td>
+    <td>2504381</td>
+  </tr>
+  
+  <tr>
+    <td>Edges</td>
+    <td>30796749</td>
+    <td>17934023</td>
+  </tr>
+ 
+  <tr>
+    <td>Clustering</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+</td><td>
+
+ <table>
   <tr>
     <td colspan="3">CS1021<sub>demo</sub></td>
   </tr>
@@ -77,6 +110,8 @@ We propose a unique dataset which could be used for the evaluation of the REIGNN
     <td>0.199</td>
   </tr>
 </table>
+</td></tr> </table>
+
 
 In order to obtain full dataset, it is required to download additional files via _download.sh_. The final revision of the file structure includes general and local parts of the dataset.
 
@@ -100,7 +135,7 @@ In order to creat .venv and install dependencies for the app running you need to
 
 # Model running
 
-The multitask version of REIGNN model is available at backend/app/ml/reignn.py. If you want to perform tests in separate environment, you can use the following code:
+The multitask version of REIGNN model is available at model/REIGNN.py. If you want to perform tests in separate environment, you can use the following code:
 
 ```python
 import torch
