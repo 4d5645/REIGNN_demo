@@ -29,6 +29,12 @@ For backend:
 ```
 TBD
 ```
+
+For frontend:
+```
+TBD
+```
+
 # Dataset
 
 We propose a unique dataset which could be used for the evaluation of the REIGNN model. The initial data was gathered from the [Semantic Scholar Open Research Corpus](https://api.semanticscholar.org/corpus) and [SCImago Journal & Country Rank website](https://www.scimagojr.com).
