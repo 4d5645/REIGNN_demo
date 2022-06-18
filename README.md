@@ -113,7 +113,7 @@ We propose a unique dataset that could be used for the evaluation of the REIGNN 
 </td></tr> </table>
 
 
-In order to obtain the full dataset, it is required to download additional files via _download.sh_. The final revision of the file structure includes general and local parts of the dataset.
+In order to obtain the full dataset, it is required to download additional files via `download.sh`. The final revision of the file structure includes general and local parts of the dataset.
 
 ## General part
 We use the large subgraph CS1021<sub>general</sub> extracted from Semantic Scholar Corpus as the basis for the CS1021<sub>demo</sub> dataset. All papers belong to the period from January 1st, 2011 to December 31st, 2021, and related to the area of Computer Science. 
