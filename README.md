@@ -11,7 +11,7 @@ arXiv PDF: _to be added_.
 
 # Prerequisites
 
-For model:
+For the REIGNN model:
 ```
 numpy==1.19.5
 pandas==1.3.0
@@ -26,8 +26,18 @@ wandb==0.12.9
 Attention -- **installing PyTorch Geometric for GPU can be tricky**.
 
 For backend:
-```
-TBD
+```shell
+python = "~3.8"
+fastapi = "^0.73.0"
+pydantic = { extras = ["dotenv"], version = "^1.8.2" }
+uvicorn = "^0.17.4"
+cookiecutter = "^1.7.3"
+loguru = "^0.6.0"
+pandas = "^1.4.0"
+scipy = "^1.8.0"
+networkx = "^2.6.3"
+mypy = "^0.931"
+ujson = "^5.1.0"
 ```
 
 For frontend:
@@ -86,12 +96,11 @@ We use a large subgraph extracted from Semantic Scholar Corpus as the basis for 
 
 # App running
 
-TBD
+In order to creat .venv and install dependencies for the app running you need to execute `.backend/setup.sh`. For server launch it is required to use `.backend/start.sh`.
 
 # Model running
 
-You can use REIGNN.py directly in your own experimental environment:
-
+The multitask version of REIGNN model is available at backend/app/ml/reignn.py. If you want to perform tests in separate environment, you can use the following code:
 
 ```python
 import torch
