@@ -76,8 +76,8 @@ We propose a unique dataset that could be used for the evaluation of the REIGNN 
  
   <tr>
     <td>Clustering</td>
-    <td>-</td>
-    <td>-</td>
+    <td>0.713684879823801</td>
+    <td>0.13815361329911047</td>
   </tr>
 </table>
 </td><td>
