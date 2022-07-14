@@ -191,12 +191,6 @@ class Stats extends React.Component {
 
             let graph_features = []
 
-            graph_features[0] = [1.23, 0.44, 0.93, 4.2]
-            graph_features[1] = [1.44, 0.79, 1.23, 6.13]
-            graph_features[2] = [2.18, 0.89, 1.53, 5.04]
-            graph_features[3] = [1.82, 0.69, 1.43, 4.28]
-            graph_features[4] = [1.51, 0.79, 1.63, 6.54]
-
             let borders = [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 10]
             let if_dist = Array(borders.length).fill(0), sjr_dist = Array(borders.length).fill(0)
 

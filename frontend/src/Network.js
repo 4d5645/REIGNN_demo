@@ -102,17 +102,6 @@ class Network extends React.Component {
                 edges.push({from: received_graph[i]["author_a"], to: received_graph[i]["author_b"]})
             }
 
-            /*
-            edges.push({ from: nextProps.node_ids[0]["id"], to: nextProps.node_ids[1]["id"]})
-            edges.push({ from: nextProps.node_ids[1]["id"], to: nextProps.node_ids[2]["id"]})
-            edges.push({ from: nextProps.node_ids[0]["id"], to: nextProps.node_ids[2]["id"]})
-            edges.push({ from: nextProps.node_ids[1]["id"], to: nextProps.node_ids[3]["id"]})
-            edges.push({ from: nextProps.node_ids[0]["id"], to: nextProps.node_ids[4]["id"]})
-*/
-
-//            edges.push({ from: nextProps.node_ids[1]["id"], to: nextProps.node_ids[4]["id"]})
-//            edges.push({ from: nextProps.node_ids[1]["id"], to: nextProps.node_ids[5]["id"]})
-//            edges.push({ from: nextProps.node_ids[1]["id"], to: nextProps.node_ids[6]["id"]})
             newGraph.nodes = nodes
             newGraph.edges = edges
             this.setState({graph: newGraph});
@@ -124,13 +113,7 @@ class Network extends React.Component {
                     Math.abs(received_graph_sjr[i]),
                     Math.abs(received_graph_hi[i])]
             }
-/*
-            graph_features[[nextProps.node_ids[0]["id"], nextProps.node_ids[1]["id"]]] = [1.23, 0.64, 0.93, 4.2]
-            graph_features[[nextProps.node_ids[1]["id"], nextProps.node_ids[2]["id"]]] = [1.44, 0.79, 1.23, 6.13]
-            graph_features[[nextProps.node_ids[0]["id"], nextProps.node_ids[2]["id"]]] = [2.18, 0.89, 1.53, 5.04]
-            graph_features[[nextProps.node_ids[1]["id"], nextProps.node_ids[3]["id"]]] = [1.82, 0.69, 1.43, 4.28]
-            graph_features[[nextProps.node_ids[0]["id"], nextProps.node_ids[4]["id"]]] = [1.51, 0.79, 1.63, 6.54]
-*/
+
             this.setState({graph_features: graph_features})
 
         } else {
@@ -148,7 +131,6 @@ class Network extends React.Component {
         let node_ids = this.props.node_ids
         let received_graph = this.props.graph
         let nodes = [], edges = []
-//        node_ids = [{"id": 1, "name":""}, {"id": 2, "name":""}, {"id": 3, "name":""}]
 
         if (node_ids.length != 0) {
             let obj = this
