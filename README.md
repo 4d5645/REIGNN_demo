@@ -3,7 +3,7 @@
 ![Pipeline_image](resources/recommender_pipeline_rev4.png#gh-light-mode-only)
 ![Pipeline_image](resources/recommender_pipeline_rev4dm.png#gh-dark-mode-only)
 
-Welcome to the official repo of the REIGNN demonstration app -- web service for scientific collaborations assessment powered by GNN-based recommender system. Here we present the source code for CIKM'22 paper "Demonstration of REIGNN: R&D Team Management with Graph Machine Learning".
+Welcome to the official repo of the REIGNN demonstration app -- web service for scientific collaborations assessment powered by a GNN-based recommender system. Here we present the source code for the CIKM'22 paper "Demonstration of REIGNN: R&D Team Management with Graph Machine Learning".
 
  Artyom Sosedka, Anastasia Martynova, Vladislav Tishin, Natalia Semenova, [Vadim Porvatov](https://www.researchgate.net/profile/Vadim-Porvatov)
 
@@ -47,9 +47,42 @@ TBD
 
 # Dataset
 
-We propose a unique dataset which could be used for the evaluation of the REIGNN model. The initial data was gathered from the [Semantic Scholar Open Research Corpus](https://api.semanticscholar.org/corpus) and [SCImago Journal & Country Rank website](https://www.scimagojr.com).
+We propose a unique dataset that could be used for the evaluation of the REIGNN model. The initial data was gathered from the [Semantic Scholar Open Research Corpus](https://api.semanticscholar.org/corpus) and [SCImago Journal & Country Rank website](https://www.scimagojr.com).
 
 <table>
+<tr><td>
+
+<table>
+  <tr>
+    <td colspan="3">CS1021<sub>general</sub></td>
+  </tr>
+  <tr>
+    <td>Network type</td>
+    <td>Co-authorship</td>
+    <td>Citation</td>
+  </tr>
+  
+  <tr>
+    <td>Nodes</td>
+    <td>2798829</td>
+    <td>2504381</td>
+  </tr>
+  
+  <tr>
+    <td>Edges</td>
+    <td>30796749</td>
+    <td>17934023</td>
+  </tr>
+ 
+  <tr>
+    <td>Clustering</td>
+    <td>0.714</td>
+    <td>0.138</td>
+  </tr>
+</table>
+</td><td>
+
+ <table>
   <tr>
     <td colspan="3">CS1021<sub>demo</sub></td>
   </tr>
@@ -77,11 +110,13 @@ We propose a unique dataset which could be used for the evaluation of the REIGNN
     <td>0.199</td>
   </tr>
 </table>
+</td></tr> </table>
 
-In order to obtain full dataset, it is required to download additional files via _download.sh_. The final revision of the file structure includes general and local parts of the dataset.
+
+In order to obtain the full dataset, it is required to download additional files via `download.sh`. The final revision of the file structure includes general and local parts of the dataset.
 
 ## General part
-We use a large subgraph extracted from Semantic Scholar Corpus as the basis for the CS1021<sub>demo</sub> dataset. All papers belong to the period from January 1st, 2011 to December 31st, 2021 and related to the area of Computer Science. 
+We use the large subgraph CS1021<sub>general</sub> extracted from Semantic Scholar Corpus as the basis for the CS1021<sub>demo</sub> dataset. All papers belong to the period from January 1st, 2011 to December 31st, 2021, and related to the area of Computer Science. 
 
 - _SSORC_CS_2010_2021_authors_edge_list.csv_ - common graph edge list.
 - _SSORC_CS_2010_2021_authors_edges_papers_indices.csv_ - common table describing relations between edges in a co-authorship graph (collaborations) and nodes in a citation graph (papers).  
@@ -96,11 +131,11 @@ We use a large subgraph extracted from Semantic Scholar Corpus as the basis for 
 
 # App running
 
-In order to creat .venv and install dependencies for the app running you need to execute `.backend/setup.sh`. For server launch it is required to use `.backend/start.sh`.
+In order to create .venv and install dependencies for the app running, you need to execute `.backend/setup.sh`. For server launch, it is required to use `.backend/start.sh`.
 
 # Model running
 
-The multitask version of REIGNN model is available at backend/app/ml/reignn.py. If you want to perform tests in separate environment, you can use the following code:
+The multitask version of the REIGNN model is available at model/REIGNN.py. If you want to perform tests in a separate environment, you can use the following code:
 
 ```python
 import torch
